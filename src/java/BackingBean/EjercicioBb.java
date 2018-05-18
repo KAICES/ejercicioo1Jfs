@@ -53,15 +53,30 @@ public class EjercicioBb {
     public EjercicioBb() {
     }
     
-    public void registrarse(){
+    public String comprobar(){
         
         UsuarioVo miUsuario;
             
         miLista = new ArrayList<UsuarioVo>();
         
-        miUsuario = new UsuarioVo(getUser()+" ", getTlf()+"");
-        miLista.add(miUsuario);       
+        miUsuario = new UsuarioVo("Hola señor "+getUser(),", su numero es "+getTlf()+"");
+        miLista.add(miUsuario); 
         
+        
+        String retorno = "";
+      
+        if (getTlf().endsWith("0") || getTlf().endsWith("1")){
+            retorno = "amarillo";
+        }else if(getTlf().endsWith("2") || getTlf().endsWith("3")){
+                retorno = "azul";     
+        }else if(getTlf().endsWith("4") || getTlf().endsWith("5")){
+                retorno = "violeta";     
+        }else if(getTlf().endsWith("6") || getTlf().endsWith("7")){
+                retorno = "rojo";     
+        }else if(getTlf().endsWith("8") || getTlf().endsWith("9")){
+                retorno = "gris";     
+        }        
+        return retorno;
     }
     
     

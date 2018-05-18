@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Numero Gris</title>
+        
+                <style type ="text/css">
+                    body{background:grey}               
+                </style>
+        
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:dataTable value="#{ejercicioBb.miLista}" var="usuario" border="0" cellpadding="0">
+                <h:column rowHeader="usuario">
+                    <h:outputText value="#{usuario.userVo}"></h:outputText>                    
+                </h:column>
+                <h:column rowHeader="telefono">                
+                    <h:outputText value="#{usuario.telefonoVo}"></h:outputText>                    
+                </h:column>         
+            </h:dataTable>             
+            <h:commandButton value="volver" action="index"/>            
+        </h:form>        
+    </h:body>
+</html>
+

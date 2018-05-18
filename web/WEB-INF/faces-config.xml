@@ -3,5 +3,27 @@
               xmlns="http://xmlns.jcp.org/xml/ns/javaee"
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
-
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>amarillo</from-outcome>
+            <to-view-id>/amarillo.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>violeta</from-outcome>
+            <to-view-id>/violeta.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>rojo</from-outcome>
+            <to-view-id>/rojo.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>gris</from-outcome>
+            <to-view-id>/gris.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>azul</from-outcome>
+            <to-view-id>/azul.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
 </faces-config>
