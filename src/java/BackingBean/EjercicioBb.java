@@ -8,8 +8,12 @@ package BackingBean;
 import ValueObject.UsuarioVo;
 import java.util.ArrayList;
 import java.util.List;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.component.UIComponent;
+import javax.faces.component.UIInput;
+import javax.faces.context.FacesContext;
 
 /**
  *
@@ -52,6 +56,17 @@ public class EjercicioBb {
         
     public EjercicioBb() {
     }
+    
+    public void validar(FacesContext context,UIComponent toValidate, Object value){
+        context = FacesContext.getCurrentInstance();
+        String texto = (String)value;
+        
+        if(texto.length()!=10){
+            ((UIInput)toValidate).setValid(false);
+            context.addMessage(toValidate.getClientId(context),new FacesMessage("Digite un numero de telefono correcto"));
+        }         
+    }    
+    
     
     public String comprobar(){
         
